@@ -1,6 +1,9 @@
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
+
 export type TMenuItem = {
   id: number;
   label: string;
+  dda: "d";
   path?: string;
   subList?: {
     id: number;
@@ -11,9 +14,9 @@ export type TMenuItem = {
 
 export type TCardItem = {
   id: number;
-  image: any;
+  image: string[] | StaticImageData[];
   title: string;
   description: string;
   url?: string;
-  code?: any;
+  code?: string;
 };

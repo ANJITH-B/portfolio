@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Position } from "./types";
 import List from "./List";
 // import { tabItems } from './menuData';
@@ -9,7 +9,7 @@ import Link from "next/link";
 import { TMenuItem } from "@/lib/types";
 
 interface Props {
-  items: any;
+  items: TMenuItem[];
 }
 
 const SlideTabs = ({ items }: Props) => {
@@ -18,7 +18,7 @@ const SlideTabs = ({ items }: Props) => {
     height: 0,
     opacity: 0,
   });
-  const [detailOpen, setOpen] = useState<any>(null);
+  const [detailOpen, setOpen] = useState<number | null>(null);
 
   const mouseLeave = () => {
     setPosition((prev) => ({

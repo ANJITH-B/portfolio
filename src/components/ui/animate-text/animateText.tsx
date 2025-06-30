@@ -13,18 +13,18 @@ const wordVariants = {
     visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.2 } },
   };
 
-const wavyVariants = {
-  hidden: { y: 10, opacity: 0 },
-  visible: (i: number) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: i * 0.05,
-      type: "spring",
-      stiffness: 120
-    }
-  })
-};
+// const wavyVariants = {
+//   hidden: { y: 10, opacity: 0 },
+//   visible: (i: number) => ({
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       delay: i * 0.05,
+//       type: "spring",
+//       stiffness: 120
+//     }
+//   })
+// };
 
 export const SentenceAnimation = ({
   sentences,

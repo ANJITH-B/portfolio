@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "./ui/button/Button";
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <section className="flex flex-col gap-3 ">
       <p className="text-4xl text-black">

@@ -6,11 +6,12 @@ import { homeMenuItems, makePulseItems } from "@/lib/data";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import CardModal from "../modal/Modal";
+import { TCardItem } from "@/lib/types";
 
 type Props = {
   children: React.ReactNode;
-  modelData?: any;
-  handleClose? : () => void;
+  modelData?: TCardItem | null;
+  handleClose?: () => void;
 };
 
 const CustomLayout = ({ children, modelData, handleClose }: Props) => {

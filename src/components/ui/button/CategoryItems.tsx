@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface IconProps {
@@ -18,12 +17,10 @@ interface Props {
 }
 
 const CategoryItem: React.FC<Props> = ({ icon, index }) => {
-  const { scrollYProgress } = useScroll();
-  const path = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  // const path = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const [rotateDirection, setRotateDirection] = useState<number>(0);
   const [scale, setScale] = useState<number>(0.1);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const handleHoverStart = () => setScale(2050);
   const handleHoverEnd = () => setScale(0.1);
@@ -41,14 +38,12 @@ const CategoryItem: React.FC<Props> = ({ icon, index }) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const angle = calculateAngle(e, rect);
     setRotateDirection(angle + 50);
-    setIsHovered(true);
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const angle = calculateAngle(e, rect);
     setRotateDirection(angle + 50);
-    setIsHovered(false);
   };
 
   const uniqueId = `radialGradient-${index}`;

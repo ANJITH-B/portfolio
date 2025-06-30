@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Position } from "./types";
-import { menuTextExit, transition } from "../animations/variant";
-import { ReactFormState } from "react-dom/client";
+import { menuTextExit } from "../animations/variant";
 import { TMenuItem } from "@/lib/types";
 
 interface PropsList {
@@ -18,7 +17,6 @@ const List = ({
   children,
   setPosition,
   onClick,
-  subList,
   subListContent,
 }: PropsList) => {
   const ref = useRef<HTMLLIElement>(null);

@@ -87,27 +87,27 @@ export const AnimatedText = ({ text, el: Wrapper = "p", className, once, repeatD
 
 
 
-const zoomVariants = {
-  hidden: { scale: 0.5, opacity: 0 },
-  visible: { scale: 1, opacity: 1, transition: { duration: 0.3 } }
-};
+// const zoomVariants = {
+//   hidden: { scale: 0.5, opacity: 0 },
+//   visible: { scale: 1, opacity: 1, transition: { duration: 0.3 } }
+// };
 
-const slideVariants = {
-  hidden: { x: -50, opacity: 0 },
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
-};
+// const slideVariants = {
+//   hidden: { x: -50, opacity: 0 },
+//   visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
+// };
 
-const defaultAnimations = {
-  hidden: { opacity: 0, y: -5, x:5 },
-  visible: { opacity: 1, y: 0, x:0, transition: { duration: 0.1, }, },
-};
+// const defaultAnimations = {
+//   hidden: { opacity: 0, y: -5, x:5 },
+//   visible: { opacity: 1, y: 0, x:0, transition: { duration: 0.1, }, },
+// };
 
-const twistVariants = {
-  hidden: { rotate: -45, opacity: 0 },
-  visible: { rotate: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }
-};
+// const twistVariants = {
+//   hidden: { rotate: -45, opacity: 0 },
+//   visible: { rotate: 0, opacity: 1, transition: { duration: 0.4, ease: "easeOut" } }
+// };
 
-const pulseVariants = {
-  hidden: { scale: 0.9, opacity: 0 },
-  visible: { scale: [1, 1.2, 1], opacity: 1, transition: { duration: 0.6 } }
-};
+// const pulseVariants = {
+//   hidden: { scale: 0.9, opacity: 0 },
+//   visible: { scale: [1, 1.2, 1], opacity: 1, transition: { duration: 0.6 } }
+// };

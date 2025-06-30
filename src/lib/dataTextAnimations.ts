@@ -1,11 +1,12 @@
-import makepluse from '../../public/library/mockup.png'
+import makepluse from "../../public/library/mockup.png";
+import { TCardItem } from "./types";
 
-export const textAnimations = [
+export const textAnimations: TCardItem[] = [
   {
     id: 1,
     title: "Type Writer",
     description: "A smooth typewriter animation using framer-motion.",
-    image: makepluse,
+    image: [makepluse],
     code: `import { motion } from 'framer-motion';
         const Typewriter = ({ text }) => (
         <motion.span
@@ -21,7 +22,7 @@ export const textAnimations = [
     id: 2,
     title: "Type Writer",
     description: "A smooth typewriter animation using framer-motion.",
-    image: makepluse,
+    image: [makepluse],
     code: `import { motion } from 'framer-motion';
         const Typewriter = ({ text }) => (
         <motion.span

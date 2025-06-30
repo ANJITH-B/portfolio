@@ -1,13 +1,13 @@
-import gradient from "../../public/Library/gradientbg.jpg";
-import makePulse from "../../public/Library/makePluse.png";
-import mockup from "../../public/Library/mockup.png";
-import reddot from "../../public/Library/reddot.png";
+import gradient from "../../public/library/gradientbg.jpg";
+import makePulse from "../../public/library/makePluse.png";
+import mockup from "../../public/library/mockup.png";
+import reddot from "../../public/library/reddot.png";
 import { TCardItem, TMenuItem } from "./types";
 
 export const LibraryList: TCardItem[] = [
   {
     id: 1,
-    image: gradient,
+    image: [gradient],
     title: "Magic Flow",
     url: "/library/magic-flow",
     description:
@@ -15,7 +15,7 @@ export const LibraryList: TCardItem[] = [
   },
   {
     id: 2,
-    image: makePulse,
+    image: [makePulse],
     url: "/library/make-pulse",
     title: "Make Pulse",
     description:
@@ -34,14 +34,14 @@ export const ProjectList: TCardItem[] = [
   },
   {
     id: 2,
-    image: makePulse,
+    image: [makePulse],
     title: "Make Pulse",
     description:
       "makePulse is an text animating liberty, build on top of framer-motion and tailwind css",
   },
   {
     id: 3,
-    image: gradient,
+    image: [gradient],
     title: "Magic Flow",
     description:
       "Flow is an web gradient liberty based on svg build on top of framer-motion and tailwind css",

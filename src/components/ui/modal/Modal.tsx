@@ -18,7 +18,7 @@ interface CardModalProps {
 
 const CardModal = ({ item, onClose }: CardModalProps) => {
   const HandleCopy = () => {
-    navigator.clipboard.writeText(item.code);
+    navigator.clipboard.writeText(item?.code ?? item.description);
   };
 
   return (

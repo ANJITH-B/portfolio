@@ -2,7 +2,6 @@
 import React, { ElementType, useEffect, useRef, JSX } from "react";
 import { motion, useAnimation, useInView, Variant } from "framer-motion";
 import { cn } from "../../../lib/utils";
-import { bounceVariants } from "../animations/textanimation";
 
 type Props = {
   text: string | string[];
