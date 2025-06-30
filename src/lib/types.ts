@@ -3,7 +3,6 @@ import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 export type TMenuItem = {
   id: number;
   label: string;
-  dda: "d";
   path?: string;
   subList?: {
     id: number;
