@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
@@ -10,9 +10,9 @@ interface Props {
 const SmoothSlider = ({ images }: Props) => {
   const [index, setIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setIndex((prev) => (prev + 1) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +21,7 @@ const SmoothSlider = ({ images }: Props) => {
     return () => {
       clearInterval(interval);
     };
-  }, [images.length]);
+  }, [nextSlide]);
 
   return (
     <div

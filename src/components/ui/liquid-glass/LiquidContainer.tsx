@@ -1,5 +1,4 @@
 'use client';
-import { motion } from 'framer-motion';
 
 type Props = {
   children: React.ReactNode;
@@ -12,7 +11,7 @@ export default function LiquidContainer( {children} : Props) {
       <svg className="absolute w-0 h-0">
         <filter id="gooey">
           <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
-          <feColorMatrix values=" 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0  0 0 0 20 -10 " /> //20
+          <feColorMatrix values=" 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0  0 0 0 20 -10 " />  
         </filter>
       </svg>
 

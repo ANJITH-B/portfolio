@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Button from "../button/Button";
 import { transition } from "../animations/variant";
 import Image from "next/image";

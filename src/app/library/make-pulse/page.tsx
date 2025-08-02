@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import CardSection from "@/components/ui/card/CardSection";
 import CardModal from "@/components/ui/modal/Modal";
-import { textAnimations } from "@/lib/dataTextAnimations";
 import { SentenceAnimation } from "@/components/ui/animate-text/animateText";
 import { AnimatedText } from "@/components/ui/animate-text/textAnimate";
 import CustomLayout from "@/components/ui/custom-layout/CustomLayout";
@@ -14,7 +12,7 @@ import CardGrid from "@/components/ui/card/CardGrid";
 
 export default function Home() {
   const [selectedCard, setSelectCard] = useState<TCardItem | null>(null);
-  const handleCardClick = (card: TCardItem) => setSelectCard(card);
+  // const handleCardClick = (card: TCardItem) => setSelectCard(card);
   const handleClose = () => setSelectCard(null);
 
   return (

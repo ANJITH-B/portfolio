@@ -6,6 +6,7 @@ import CardSection from "@/components/ui/card/CardSection";
 import CustomLayout from "../components/ui/custom-layout/CustomLayout";
 import { TCardItem } from "@/lib/types";
 import CardGrid from "@/components/ui/card/CardGrid";
+import LiquidLoader from "@/components/ui/LiquidLoader";
  
 
 export default function Home() {
@@ -23,6 +24,9 @@ export default function Home() {
         <CardGrid title="Projects">
           <CardSection items={ProjectList} onCardClick={handleCardClick} />
         </CardGrid>
+        <section>
+          <LiquidLoader />
+        </section>
       </div>
     </CustomLayout>
   );

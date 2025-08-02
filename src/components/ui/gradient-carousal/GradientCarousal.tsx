@@ -2,9 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = {};
+ 
 
-export const GradientCarousal = (props: Props) => {
+export const GradientCarousal = ( ) => {
   return (
     <div className="w-full h-72  relative overflow-hidden border-2">
       <div className="p-10">
