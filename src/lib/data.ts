@@ -9,7 +9,7 @@ export const LibraryList: TCardItem[] = [
     id: 1,
     image: [gradient],
     title: "Magic Flow",
-    url: "/library/magic-flow",
+    // url: "/library/magic-flow",
     description:
       "Flow is an web gradient liberty based on svg build on top of framer-motion and tailwind css",
   },

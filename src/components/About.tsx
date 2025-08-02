@@ -7,13 +7,15 @@ const About = () => {
       <p className="text-4xl text-black">
         Welcome to My portfolio <br /> Here I document my explorations
       </p>
-      <p className="text-base text-gray-500 pr-60">
+      <p className="text-base text-gray-500 w-3/5 xl:w-1/2">
         Welcome to my portfolio. Here, I document my journey and exploration in
         the world of design and development. What you&apos;ll find isn&apos;t just code or
         pixels, but a blend of creativity, curiosity, and craft — turning ideas
         into impactful digital experiences.
       </p>
+    
       <div className="flex flex-row gap-2.5 py-3  w-full justify-start">
+      
         <Button
           hoverColor="#1F6FD6"
           className="border-[#DDE3FF] shadow-blue-100"

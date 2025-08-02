@@ -24,7 +24,7 @@ const CustomLayout = ({ children, modelData, handleClose }: Props) => {
       transition={transition}
       className="relative flex w-screen h-full"
     >
-      <div className="w-1/6 h-screen">
+      <div className="hidden md:block w-1/5 xl:w-1/6 h-screen ">
         <MenuBar items={menuItems} />
       </div>
       {children}

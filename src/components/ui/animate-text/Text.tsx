@@ -77,7 +77,7 @@ export const Text = (props: Props) => {
         {textArray.map((line, lineIndex) => (
           <motion.span
             variants={lineAnimation}
-            className="inline-block"
+            className="block "
             key={`${line}-${lineIndex}`}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ staggerChildren: 0.05 }}
@@ -88,17 +88,22 @@ export const Text = (props: Props) => {
                 className="inline-block"
                 variants={wordAnimation}
               >
-                {word.split("").map((letter, letterIndex) => (
-                  <motion.span
-                    key={letterIndex}
-                    variants={letterAnimation}
-                    className="inline-block"
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
+                
+                  {word.split("").map((letter, letterIndex) => (
+                    <motion.span
+                      key={`${letter}-${letterIndex}`}
+                      variants={letterAnimation}
+                      className="inline-block"
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+                <span className="inline-block">&nbsp;</span>
+                  {/* <p className="">space</p> */}
+               
+                
               </motion.span>
-            ))}
+              ))} 
           </motion.span>
         ))}
       </motion.span>

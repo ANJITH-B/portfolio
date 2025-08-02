@@ -11,7 +11,7 @@ interface Props {
 const MenuBar = ({ items }: Props) => {
   return (
     <motion.div>
-      <div className="grid h-screen pl-10  left-0 bg-neutral-50">
+      <div className=" h-screen pl-10  left-0 bg-neutral-50 hidden md:block">
         <SlideTabs items={items} />
       </div>
     </motion.div>

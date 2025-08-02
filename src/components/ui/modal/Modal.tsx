@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Button from "../button/Button";
 import { transition } from "../animations/variant";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Copy } from "lucide-react";
 import { lazy } from "react";
 import { TCardItem } from "@/lib/types";
+import { GradientCarousal } from "../gradient-carousal/GradientCarousal";
 
 const SmoothSlider = lazy(() => import("../carousal/carousel"));
 
@@ -27,7 +28,7 @@ const CardModal = ({ item, onClose }: CardModalProps) => {
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
       transition={transition}
-      className="fixed top-0 right-0 h-full w-1/3 border-l bg-white shadow-sm z-50 p-6 overflow-y-auto"
+      className="fixed top-0 right-0 h-full w-1/2 xl:w-[600px] 2xl:w-[650px] border-l bg-white shadow-sm z-50 p-6 overflow-y-auto"
     >
       <button
         className="text-gray-500 hover:text-black mb-4 border rounded-full px-2.5 py-1"
@@ -37,7 +38,9 @@ const CardModal = ({ item, onClose }: CardModalProps) => {
       </button>
       <h2 className="text-2xl font-bold mb-2">{item.title}</h2>
       <p className="text-gray-700 mb-4">{item.description}</p>
-      {Array.isArray(item.image) ? (
+      {item.title === "Magic Flow" ? (
+        <GradientCarousal />
+      ) : Array.isArray(item.image) ? (
         <SmoothSlider images={item.image} />
       ) : (
         <Image
@@ -45,7 +48,8 @@ const CardModal = ({ item, onClose }: CardModalProps) => {
           alt={item.title}
           width={400}
           height={200}
-          className="w-full h-60 object-cover border-2 mb-6"
+          priority
+          className="w-full lg:h-60 xl:h-72 2xl:h-80 object-cover border-2 mb-6"
         />
       )}
       {item.url ? (
