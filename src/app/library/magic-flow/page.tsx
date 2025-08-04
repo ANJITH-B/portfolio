@@ -17,11 +17,7 @@ export default function Page() {
   return (
     <CustomLayout>
       <div className="flex flex-col gap-14 w-5/6 h-screen px-10 pt-20 overflow-y-auto">
-        <CardSection
-          title="Text Animations"
-          items={textAnimations}
-          onCardClick={handleCardClick}
-        />
+        <CardSection items={textAnimations} onCardClick={handleCardClick} />
         <div className="bg-gray-200 w-200 h-100 flex items-center justify-center">
           <SentenceAnimation
             sentences={["hello anijth"]}
