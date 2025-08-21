@@ -16,7 +16,7 @@ const CardSection = ({ items, onCardClick }: CardSectionProps) => {
           className="w-full"
           key={item.id}
           tittle={item.title}
-          image={item.image[0]}
+          image={Array.isArray(item.image) ? item.image[0] ?? "" : item.image ?? ""}
           description={item.description}
           url={item.url}
           onClick={() => onCardClick?.(item)}

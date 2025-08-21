@@ -1,4 +1,10 @@
 import { StaticImageData } from "next/dist/shared/lib/get-img-props";
+import type { TargetAndTransition } from "framer-motion";
+
+type RequiredVariants = {
+  hidden: TargetAndTransition;
+  visible: TargetAndTransition;
+};
 
 export type TMenuItem = {
   id: number;
@@ -13,7 +19,7 @@ export type TMenuItem = {
 
 export type TCardItem = {
   id: number;
-  variants?: any;
+  variants?: RequiredVariants;
   title: string;
   image?: string | StaticImageData | string[] | StaticImageData[];
   description: string;

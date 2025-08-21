@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import { SentenceAnimation } from "@/components/ui/animate-text/animateText";
-import { AnimatedText } from "@/components/ui/animate-text/textAnimate";
 import CustomLayout from "@/components/ui/custom-layout/CustomLayout";
 import { TCardItem } from "@/lib/types";
 import Text from "@/components/ui/animate-text/Text";
@@ -9,35 +7,34 @@ import CardGrid from "@/components/ui/card/CardGrid";
 import { Animations } from "@/lib/dataTextAnimations";
 
 // Line-level animation (animates whole line block)
-export const lineAnimation = {
-  hidden: { opacity: 0, y: `1em` },
-  visible: {
-    opacity: 1,
-    y: `0em`,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
+// export const lineAnimation = {
+//   hidden: { opacity: 0, y: `1em` },
+//   visible: {
+//     opacity: 1,
+//     y: `0em`,
+//     transition: { duration: 0.6, ease: "easeOut" },
+//   },
+// };
 
 // Word-level animation (animates each word block)
-export const wordAnimation = {
-  hidden: { opacity: 0, y: `0.5em` },
-  visible: {
-    opacity: 1,
-    y: `0em`,
-    transition: { duration: 0.4, ease: "easeOut" }
-  }
-};
+// export const wordAnimation = {
+//   hidden: { opacity: 0, y: `0.5em` },
+//   visible: {
+//     opacity: 1,
+//     y: `0em`,
+//     transition: { duration: 0.4, ease: "easeOut" },
+//   },
+// };
 
 // Letter-level animation (animates each character)
-export const letterAnimation = {
-  hidden: { opacity: 0, y: `0.25em` },
-  visible: {
-    opacity: 1,
-    y: `0em`,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
-};
-
+// export const letterAnimation = {
+//   hidden: { opacity: 0, y: `0.25em` },
+//   visible: {
+//     opacity: 1,
+//     y: `0em`,
+//     transition: { duration: 0.3, ease: "easeOut" },
+//   },
+// };
 
 export default function Home() {
   const [selectedCard, setSelectCard] = useState<TCardItem | null>(null);
@@ -48,40 +45,34 @@ export default function Home() {
     <CustomLayout modelData={selectedCard} handleClose={handleClose}>
       <div className="flex flex-col gap-14 md:w-5/6 h-screen px-5 md:px-10 py-20 pt-20 overflow-y-auto">
         <CardGrid title=" ">
+          {Animations.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleCardClick?.(item)}
+              className="bg-gray-200 w-full h-48 flex items-center justify-center border-2 p-3"
+            >
+              <Text
+                letterAnimation={item.variants}
+                text={item.description}
+                className="font-bold"
+              />
+            </div>
+          ))}
 
-        {Animations.map((item) => (
-          <div key={item.id} onClick={() => handleCardClick?.(item)} className="bg-gray-200 w-full h-48 flex items-center justify-center border-2 p-3">
-            <Text
-              letterAnimation={item.variants}
-              text={item.description}
-              className="font-bold"
-            />
-          </div>
-        ))}
-
-        <Text
-  text="Hello World from Framer Motion"
-  lineAnimation={lineAnimation}
-  wordAnimation={wordAnimation}
-  letterAnimation={letterAnimation}
-  viewPortAmount={0.5}
-  once
-  repeatDelay={2}
-/>
-
-        
+          {/* <Text
+            text="Hello World from Framer Motion"
+            lineAnimation={lineAnimation}
+            wordAnimation={wordAnimation}
+            letterAnimation={letterAnimation}
+            viewPortAmount={0.5}
+            once
+            repeatDelay={2}
+          /> */}
         </CardGrid>
       </div>
     </CustomLayout>
   );
 }
-
-
-
-
-
-
-
 
 
 
@@ -109,8 +100,6 @@ export default function Home() {
 //   )
 // }
 
-
-
 //  <div className="bg-gray-200 w-full h-60 flex items-center justify-center  border-2 ">
 //           <SentenceAnimation
 //             sentences={["hello anijth", "hekl "]}
@@ -124,8 +113,6 @@ export default function Home() {
 //           />
 //         </div>
 
-
-
 // <div className="bg-gray-200 w-full h-60 flex items-center justify-center border-2">
 //           <Text
 //             wordAnimation={twistVariants}
@@ -133,6 +120,5 @@ export default function Home() {
 //             className=" w-60 font-bold"
 //           />
 //         </div>
-
 
 //      <Text letterVariants={zoomVariants} text='This is my new companied component for text animation'/>

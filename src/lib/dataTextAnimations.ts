@@ -27,23 +27,7 @@ export const Animations: TCardItem[] = [
     },
     description: "A smooth typewriter animation using framer-motion.",
   },
-  {
-    id: 3,
-    title: "wavyVariants",
-    variants: {
-      hidden: { y: 10, opacity: 0 },
-      visible: (i: number) => ({
-        y: 0,
-        opacity: 1,
-        transition: {
-          delay: i * 0.05,
-          type: "spring",
-          stiffness: 120,
-        },
-      }),
-    },
-    description: "A smooth typewriter animation using framer-motion.",
-  },
+ 
   {
     id: 4,
     title: "zoomVariants",
@@ -142,3 +126,21 @@ export const bounceVariants = {
     transition: { type: "spring", stiffness: 300, damping: 15 },
   },
 };
+
+//  {
+//     id: 3,
+//     title: "wavyVariants",
+//     variants: {
+//       hidden: { y: 10, opacity: 0 },
+//       visible: (i: number) => ({
+//         y: 0,
+//         opacity: 1,
+//         transition: {
+//           delay: i * 0.05,
+//           type: "spring",
+//           stiffness: 120,
+//         },
+//       }),
+//     },
+//     description: "A smooth typewriter animation using framer-motion.",
+//   },

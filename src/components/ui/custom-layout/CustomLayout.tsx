@@ -7,7 +7,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import CardModal from "../modal/Modal";
 import { TCardItem } from "@/lib/types";
-import Card from "../card/Card";
 import ModalCode from "../modal/ModalCode";
 
 type Props = {

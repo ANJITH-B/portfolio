@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  oneDark,
-  oneLight,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism"; //  oneDark,
 import { Copy } from "lucide-react";
 import { TCardItem } from "@/lib/types";
 import { transition } from "../animations/variant";
