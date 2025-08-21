@@ -13,8 +13,9 @@ export type TMenuItem = {
 
 export type TCardItem = {
   id: number;
-  image: string[] | StaticImageData[];
+  variants?: any;
   title: string;
+  image?: string | StaticImageData | string[] | StaticImageData[];
   description: string;
   url?: string;
   code?: string;

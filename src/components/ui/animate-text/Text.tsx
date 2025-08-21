@@ -19,7 +19,7 @@ type Props = {
     hidden: Variant;
     visible: Variant;
   };
-  wordAnimation: {
+  wordAnimation?: {
     hidden: Variant;
     visible: Variant;
   };
@@ -82,13 +82,12 @@ export const Text = (props: Props) => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ staggerChildren: 0.05 }}
           >
-            {line.split("").map((word, wordIndex) => (
+            {line.split(" ").map((word, wordIndex) => (
               <motion.span
                 key={`${word}-${wordIndex}`}
-                className="inline-block"
+                className="inline-block mr-2"
                 variants={wordAnimation}
-              >
-                
+              > 
                   {word.split("").map((letter, letterIndex) => (
                     <motion.span
                       key={`${letter}-${letterIndex}`}
@@ -97,11 +96,7 @@ export const Text = (props: Props) => {
                     >
                       {letter}
                     </motion.span>
-                  ))}
-                <span className="inline-block">&nbsp;</span>
-                  {/* <p className="">space</p> */}
-               
-                
+                  ))}     
               </motion.span>
               ))} 
           </motion.span>

@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import CardModal from "../modal/Modal";
 import { TCardItem } from "@/lib/types";
+import Card from "../card/Card";
+import ModalCode from "../modal/ModalCode";
 
 type Props = {
   children: React.ReactNode;
@@ -29,7 +31,11 @@ const CustomLayout = ({ children, modelData, handleClose }: Props) => {
       </div>
       {children}
       <AnimatePresence>
-        {modelData && <CardModal item={modelData} onClose={handleClose} />}
+        {modelData && pathname === '/' ? (
+          <CardModal item={modelData} onClose={handleClose} />
+        ) : modelData ? (
+          <ModalCode item={modelData} onClose={handleClose} />
+        ) : null}
       </AnimatePresence>
     </motion.div>
   );

@@ -18,11 +18,11 @@ export default function Home() {
     <CustomLayout modelData={selectedCard} handleClose={handleClose}>
       <div className="flex flex-col gap-10 md:gap-14 md:w-5/6 h-screen px-5 md:px-10 py-20 overflow-y-auto">
         <About />
-        <CardGrid title="Library">
-          <CardSection items={LibraryList} onCardClick={handleCardClick} />
-        </CardGrid>
         <CardGrid title="Projects">
           <CardSection items={ProjectList} onCardClick={handleCardClick} />
+        </CardGrid>
+        <CardGrid title="Components">
+          <CardSection items={LibraryList} onCardClick={handleCardClick} />
         </CardGrid>
         <section>
           <LiquidLoader />

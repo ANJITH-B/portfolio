@@ -25,7 +25,7 @@ const SmoothSlider = ({ images }: Props) => {
 
   return (
     <div
-      className="relative w-full lg:h-60 xl:h-72 overflow-hidden bg-black border-2"
+      className="relative w-full h-40 lg:h-70 xl:h-85 overflow-hidden bg-black border-2"
       onClick={nextSlide}
     >
       <AnimatePresence initial={false} mode="popLayout">

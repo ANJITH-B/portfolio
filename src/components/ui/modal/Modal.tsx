@@ -43,14 +43,16 @@ const CardModal = ({ item, onClose }: CardModalProps) => {
       ) : Array.isArray(item.image) ? (
         <SmoothSlider images={item.image} />
       ) : (
-        <Image
-          src={item.image}
-          alt={item.title}
-          width={400}
-          height={200}
-          priority
-          className="w-full lg:h-60 xl:h-72 2xl:h-80 object-cover border-2 mb-6"
-        />
+        item.image ? (
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={400}
+            height={200}
+            priority
+            className="w-full lg:h-60 xl:h-72 2xl:h-80 object-cover border-2 mb-6"
+          />
+        ) : null
       )}
       {item.url ? (
         <Button
@@ -62,14 +64,14 @@ const CardModal = ({ item, onClose }: CardModalProps) => {
         </Button>
       ) : null}
       <p className="text-gray-700 mt-4">{item.description}</p>
-      {item.code ? (
+      {item.variants ? (
         <div className="border my-4 h-full">
           <button onClick={HandleCopy}>
             <Copy className=" text-gray-300 p-1" />
           </button>
           <div className=" overflow-hidden border-1  text-xs">
             <SyntaxHighlighter language="tsx" style={oneLight} wrapLongLines>
-              {item.code}
+            {JSON.stringify(item.variants, null, 2)}
             </SyntaxHighlighter>
           </div>
         </div>

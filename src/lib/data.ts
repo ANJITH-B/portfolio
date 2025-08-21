@@ -1,7 +1,8 @@
 import gradient from "../../public/library/gradientbg.jpg";
 import makePulse from "../../public/library/makePluse.png";
-import mockup from "../../public/library/mockup.png";
-import reddot from "../../public/library/reddot.png";
+import mockup from "../../public/assets/mockup.png";
+import reddot from "../../public/assets/reddot.png";
+import reddotPc from "../../public/assets/reddotPc.png";
 import { TCardItem, TMenuItem } from "./types";
 
 export const LibraryList: TCardItem[] = [
@@ -26,7 +27,7 @@ export const LibraryList: TCardItem[] = [
 export const ProjectList: TCardItem[] = [
   {
     id: 1,
-    image: [mockup, reddot, makePulse, gradient],
+    image: [ reddot, reddotPc ],
     title: "Red Dot Consultancy",
     url: "https://reddotconsultancy.in",
     description:
@@ -34,15 +35,15 @@ export const ProjectList: TCardItem[] = [
   },
   {
     id: 2,
-    image: [makePulse],
-    title: "Make Pulse",
+    image: [mockup, gradient],
+    title: "Map My Property",
     description:
       "makePulse is an text animating liberty, build on top of framer-motion and tailwind css",
   },
   {
     id: 3,
     image: [gradient],
-    title: "Magic Flow",
+    title: "DJI Mavic 3 landing page",
     description:
       "Flow is an web gradient liberty based on svg build on top of framer-motion and tailwind css",
   },
